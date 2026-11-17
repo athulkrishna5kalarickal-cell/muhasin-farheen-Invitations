@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#4b1025">
+<title>Muhasin M. & Farheen — Wedding Invitation</title>
+<style>
+:root{--wine:#4b1025;--wine2:#6b2039;--gold:#d9bd83;--cream:#fbf4e9;--ink:#351521;--muted:#866b60}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,'Times New Roman',serif}button,input,textarea,select{font:inherit}
+button{cursor:pointer}.cover{min-height:100svh;background:radial-gradient(ellipse at center,#762e49 0,#4b1025 52%,#210710 100%);color:var(--cream);display:grid;place-items:center;padding:28px 18px;position:relative;overflow:hidden}
+.cover:before,.cover:after{content:"❧";position:absolute;color:#d9bd8330;font-size:clamp(200px,38vw,470px);pointer-events:none}.cover:before{top:-.2em;left:-.13em;transform:rotate(-35deg)}.cover:after{bottom:-.3em;right:-.1em;transform:rotate(145deg)}
+.cover-frame{position:relative;z-index:1;width:min(100%,650px);padding:clamp(30px,7vw,70px) 20px;border:1px solid #d9bd83a8;text-align:center;outline:1px solid #d9bd8355;outline-offset:8px;animation:arrive 1.2s ease both}
+@keyframes arrive{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
+.seal{width:88px;height:88px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);background:radial-gradient(circle,#8c3d54,#4b1025 70%);box-shadow:0 6px 24px #16040b99;color:var(--gold);font-size:22px;position:relative}
+.seal:after{content:"";position:absolute;inset:6px;border:1px solid #d9bd8380;border-radius:50%}
+.kicker,.eyebrow,.smallcaps{font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase}.kicker{color:var(--gold)}.arabic{font-size:27px;color:var(--gold);margin:22px 0}.cover h1{font-size:clamp(43px,10vw,78px);font-weight:400;line-height:1.02;margin:18px 0;color:#fff5e6}.cover h1 span{display:block;color:var(--gold);font-size:.62em;font-style:italic;margin:8px}.cover .sub{letter-spacing:.18em;text-transform:uppercase;font:11px Arial,sans-serif;color:#ead9c2;line-height:2}.goldline{color:var(--gold);margin:22px 0;font-size:21px}
+.btn{border:1px solid var(--gold);background:transparent;color:var(--gold);padding:13px 23px;font:10px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.btn:hover{background:var(--gold);color:var(--wine)}.btn.light{color:var(--wine);border-color:var(--wine)}.btn.light:hover{background:var(--wine);color:white}
+#main{display:none}#main.show{display:block}.section{padding:76px 20px;text-align:center;position:relative}.section.dark{background:var(--wine);color:var(--cream)}.section h2{font-size:clamp(30px,6vw,46px);font-weight:400;margin:12px 0 20px}.eyebrow{color:#a77c43}.dark .eyebrow{color:var(--gold)}.ornament{color:#b48b51;font-size:25px;margin:16px}.copy{max-width:690px;margin:0 auto;line-height:1.9;font-size:17px}.muted{color:var(--muted)}.dark .muted{color:#e3cdb1}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}.reveal.in{opacity:1;transform:none}
+.scratch-wrap{max-width:440px;margin:30px auto 0;position:relative;border:1px solid #c7a86c;padding:10px;background:#fffaf1}.scratch-wrap canvas{position:absolute;inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);touch-action:none;cursor:crosshair}.date-under{min-height:130px;display:grid;place-content:center;gap:8px;color:var(--wine)}.date-under strong{font-size:29px;font-weight:400}.date-under span{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.countdown{display:flex;justify-content:center;gap:clamp(12px,4vw,34px);flex-wrap:wrap;margin:32px auto}.unit{min-width:62px}.unit strong{display:block;color:var(--gold);font-size:clamp(31px,7vw,48px);font-weight:400;font-variant-numeric:tabular-nums}.unit span{font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+.detail-grid{max-width:850px;margin:32px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.detail{border:1px solid #c6a76c;padding:28px 18px;background:#fffaf3}.detail h3{font-weight:400;font-size:25px;margin:12px 0}.detail p{line-height:1.7;margin:8px 0}
+.family{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:760px;margin:30px auto}.family-card{padding:28px 15px;border-top:1px solid #c6a76c;border-bottom:1px solid #c6a76c}.family-card h3{font-size:24px;font-weight:400;margin:12px}
+form{max-width:520px;margin:28px auto 0;text-align:left}label{display:block;font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;margin:16px 0 7px}input,select,textarea{width:100%;padding:13px;border:1px solid #c8b99f;background:#fffaf3;color:var(--ink);border-radius:0}textarea{min-height:90px;resize:vertical}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-note{font:11px Arial,sans-serif;line-height:1.6;opacity:.8}.status{font:13px Arial,sans-serif;margin-top:12px;min-height:18px}
+.music{position:fixed;right:16px;bottom:16px;z-index:5;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:var(--wine);color:var(--gold);font-size:18px;box-shadow:0 5px 20px #0003}.music.playing{animation:spin 5s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+footer{background:#210710;color:#e5d1b2;padding:38px 20px;text-align:center}.footer-names{font-size:30px;color:var(--gold);margin:12px}
+a{color:inherit}.maplink{display:inline-block;color:var(--wine);border-bottom:1px solid var(--gold);padding:8px 0;text-decoration:none;font:10px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}.dark .maplink{color:var(--gold)}
+@media(max-width:520px){.section{padding:60px 17px}.formrow{grid-template-columns:1fr}.cover-frame{padding:35px 18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section class="cover" id="cover">
+ <div class="cover-frame">
+  <div class="seal">M <span style="font-size:12px">&</span> F</div>
+  <div class="kicker">A celebration of love & faith</div>
+  <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <p class="sub">Together with their families<br>request the pleasure of your company</p>
+  <h1>MUHASIN M.<span>&</span>FARHEEN</h1>
+  <div class="goldline">✦ ❧ ✦</div>
+  <p class="sub">Are getting married<br>10 January 2027 · Palakkad</p>
+  <button class="btn" id="openInvite">Tap to open invitation</button>
+ </div>
+</section>
+<main id="main">
+ <section class="section reveal">
+  <div class="eyebrow">A note of joy</div><div class="ornament">❧</div><h2>With Hearts Full of Gratitude</h2>
+  <p class="copy">With the blessings of Allah and the love of our families, we warmly invite you to share in the joy of our wedding. Your presence, duas and blessings will make our celebration even more special as we begin this beautiful journey together.</p>
+  <p class="eyebrow" style="margin-top:25px">Insha’Allah · If Allah wills</p>
+ </section>
+ <section class="section dark reveal">
+  <div class="eyebrow">A little surprise</div><h2>Scratch to Reveal the Date</h2>
+  <p class="muted">Gently rub the card below to reveal our special day.</p>
+  <div class="scratch-wrap"><div class="date-under"><span>Our wedding day</span><strong>10 January 2027</strong><span>11:30 AM – 3:00 PM</span></div><canvas id="scratch"></canvas></div>
+  <div style="height:24px"></div><div class="eyebrow">Time until the big day</div>
+  <div class="countdown"><div class="unit"><strong id="days">000</strong><span>Days</span></div><div class="unit"><strong id="hours">00</strong><span>Hours</span></div><div class="unit"><strong id="mins">00</strong><span>Minutes</span></div><div class="unit"><strong id="secs">00</strong><span>Seconds</span></div></div>
+ </section>
+ <section class="section reveal">
+  <div class="eyebrow">The gathering</div><h2>Details of the Blessed Day</h2>
+  <div class="detail-grid">
+   <article class="detail"><div class="ornament">✧</div><div class="eyebrow">Date & time</div><h3>Sunday, 10 January 2027</h3><p>11:30 AM to 3:00 PM</p></article>
+   <article class="detail"><div class="ornament">⌖</div><div class="eyebrow">Venue location</div><h3>Kottayal Convention Center</h3><p>Edthara, Palakkad, Kerala, India</p><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Kottayal+Convention+Center%2C+Edthara%2C+Palakkad%2C+Kerala%2C+India" target="_blank" rel="noopener">Get directions ↗</a></article>
+  </div>
+ </section>
+ <section class="section dark reveal">
+  <div class="eyebrow">Kindly respond</div><h2>Will You Join Us?</h2>
+  <p class="copy muted">Please let us know if you can celebrate this day with us.</p>
+  <form id="rsvpForm">
+   <label for="guest">Your full name</label><input id="guest" required placeholder="Your name">
+   <div class="formrow"><div><label for="guests">Number of guests</label><select id="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div><div><label for="reply">Your response</label><select id="reply"><option>Accept with joy</option><option>Decline with regret</option></select></div></div>
+   <label for="rsvpmessage">Message (optional)</label><textarea id="rsvpmessage" placeholder="Your wishes..."></textarea>
+   <button class="btn" type="submit">Send response via WhatsApp</button><div class="status" id="rsvpStatus"></div>
+   <p class="form-note">Your response will open WhatsApp addressed to the wedding contact number.</p>
+  </form>
+ </section>
+ <section class="section reveal">
+  <div class="eyebrow">With the blessings of</div><h2>Our Families</h2><div class="ornament">❖</div>
+  <p class="copy">We are grateful for the love, prayers and support of our families. We look forward to celebrating this special day with you.</p>
+  <div class="family"><div class="family-card"><div class="eyebrow">The Groom</div><h3>MUHASIN M.</h3></div><div class="family-card"><div class="eyebrow">The Bride</div><h3>FARHEEN</h3></div></div>
+ </section>
+ <section class="section dark reveal">
+  <div class="eyebrow">Heartfelt messages</div><h2>Share Your Duas & Blessings</h2>
+  <form id="wishForm">
+   <label for="wishName">Your name</label><input id="wishName" required placeholder="Your beautiful name">
+   <label for="wishText">Your message</label><textarea id="wishText" required placeholder="Write your wishes and duas..."></textarea>
+   <button class="btn" type="submit">Send duas via WhatsApp</button><div class="status" id="wishStatus"></div>
+  </form>
+ </section>
+ <section class="section reveal">
+  <div class="arabic" style="color:#9b7441">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+  <p class="copy">May Allah bless you both, bestow His blessings upon you, and unite you in goodness.</p>
+  <div class="ornament">❖ · ❖</div><p class="eyebrow">With love & best wishes</p><h2 style="color:var(--wine)">MUHASIN M. & FARHEEN</h2>
+ </section>
+</main>
+<footer><div class="eyebrow" style="color:var(--gold)">You are warmly invited</div><div class="footer-names">Muhasin M. & Farheen</div><div class="smallcaps">10 January 2027 · Palakkad</div><p class="smallcaps" style="margin-top:22px">Made with love & duas</p></footer>
+<button class="music" id="musicBtn" aria-label="Play wedding music" title="Play wedding music">♫</button>
+<audio id="weddingAudio" loop preload="none" src="wedding-song.mp3"></audio>
+<script>
+const RSVP_PHONE="917510902395"; // WhatsApp number with India country code
+const WEDDING_DATE=new Date("2027-01-10T11:30:00+05:30");
+const main=document.getElementById("main");
+document.getElementById("openInvite").addEventListener("click",()=>{
+ main.classList.add("show");document.getElementById("cover").style.display="none";
+ window.scrollTo({top:0,behavior:"smooth"});
+});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+function countdown(){let t=Math.max(0,WEDDING_DATE-new Date());document.getElementById("days").textContent=String(Math.floor(t/86400000)).padStart(3,"0");document.getElementById("hours").textContent=String(Math.floor(t/3600000)%24).padStart(2,"0");document.getElementById("mins").textContent=String(Math.floor(t/60000)%60).padStart(2,"0");document.getElementById("secs").textContent=String(Math.floor(t/1000)%60).padStart(2,"0")}
+countdown();setInterval(countdown,1000);
+// Scratch-to-reveal canvas
+const canvas=document.getElementById("scratch"),ctx=canvas.getContext("2d");let scratching=false,cleared=false;
+function setupScratch(){const r=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle="#b9a58a";ctx.fillRect(0,0,r.width,r.height);ctx.fillStyle="#5a2338";ctx.font="12px Arial";ctx.textAlign="center";ctx.fillText("✦  SCRATCH HERE  ✦",r.width/2,r.height/2);ctx.globalCompositeOperation="destination-out"}
+function scratchAt(e){const r=canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;ctx.beginPath();ctx.arc(x,y,22,0,Math.PI*2);ctx.fill();if(!cleared){const d=ctx.getImageData(0,0,canvas.width,canvas.height).data;let n=0;for(let i=3;i<d.length;i+=32)if(d[i]===0)n++;if(n>d.length/32*.42){canvas.style.opacity="0";canvas.style.transition="opacity .5s";cleared=true;setTimeout(()=>canvas.style.display="none",550)}}}
+canvas.addEventListener("pointerdown",e=>{scratching=true;canvas.setPointerCapture(e.pointerId);scratchAt(e)});canvas.addEventListener("pointermove",e=>{if(scratching)scratchAt(e)});canvas.addEventListener("pointerup",()=>scratching=false);canvas.addEventListener("pointercancel",()=>scratching=false);window.addEventListener("load",setupScratch);window.addEventListener("resize",()=>{if(!cleared)setupScratch()});
+// Audio starts only after a visitor taps the music button; add your own licensed MP3 as wedding-song.mp3.
+const audio=document.getElementById("weddingAudio"),musicBtn=document.getElementById("musicBtn");
+musicBtn.addEventListener("click",async()=>{try{if(audio.paused){await audio.play();musicBtn.classList.add("playing");musicBtn.textContent="Ⅱ";musicBtn.title="Pause wedding music"}else{audio.pause();musicBtn.classList.remove("playing");musicBtn.textContent="♫";musicBtn.title="Play wedding music"}}catch(e){alert("Add your chosen MP3 file named wedding-song.mp3 to the GitHub repository to enable music.")}});
+function sendWhatsApp(text){const url="https://wa.me/"+RSVP_PHONE+"?text="+encodeURIComponent(text);window.open(url,"_blank","noopener")}
+document.getElementById("rsvpForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("guest").value,guests=document.getElementById("guests").value,reply=document.getElementById("reply").value,msg=document.getElementById("rsvpmessage").value;sendWhatsApp("Wedding RSVP — Muhasin M. & Farheen\nName: "+name+"\nGuests: "+guests+"\nResponse: "+reply+"\nMessage: "+msg);document.getElementById("rsvpStatus").textContent="WhatsApp is opening with your response."});
+document.getElementById("wishForm").addEventListener("submit",e=>{e.preventDefault();const n=document.getElementById("wishName").value,m=document.getElementById("wishText").value;sendWhatsApp("Duas & Blessings — Muhasin M. & Farheen\nFrom: "+n+"\nMessage: "+m);document.getElementById("wishStatus").textContent="WhatsApp is opening with your message."});
+</script>
+</body></html>
